@@ -62,21 +62,15 @@ peopleInput.addEventListener("input", () => {
 resetButton.addEventListener("click", reset);
 
 function calculate() {
-  const bill = Number(billInput.value);
-  const people = Number(peopleInput.value);
+  const bill = parseFloat(billInput.value);
+  const people = parseInt(peopleInput.value, 10);
 
   // clear error state on every calculation attempt
   peopleInput.closest(".input-group")?.classList.remove("error");
 
   // guard clause - only calculate when all three fields are filled
-  if (
-    !Number.isFinite(bill) ||
-    bill <= 0 ||
-    !selectedTip ||
-    !Number.isFinite(people) ||
-    people <= 0
-  ) {
-    if (Number.isFinite(people) && people <= 0 && peopleInput.value !== "") {
+  if (!bill || !selectedTip || isNaN(people) || people <= 0) {
+    if (people <= 0 && peopleInput.value !== "") {
       peopleInput.closest(".input-group")?.classList.add("error");
     }
     tipPerPersonEl.textContent = "$0.00";
