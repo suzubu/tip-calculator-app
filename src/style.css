@@ -178,7 +178,7 @@ main {
 
 .input-wrapper input::placeholder {
   color: var(--green-900);
-  opacity: 35%;
+  opacity: 0.35;
 }
 
 .input-wrapper:focus-within {
