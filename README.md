@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repo](https://github.com/suzubu/tip-calculator-app)
-- Live Site URL: [Live URL](https://your-live-site-url.com)
+- Live Site URL: [Live URL](https://suzubu.github.io/tip-calculator-app/)
 
 ## My process
 
