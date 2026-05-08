@@ -56,7 +56,7 @@ billInput.addEventListener("blur", () => {
 peopleInput.addEventListener("input", () => {
   peopleInput.value = peopleInput.value
     .replace(/[^0-9]/g, "")
-    .replace(/^0+/, "");
+    .replace(/^0+(?=\d)/, "");
   calculate();
 });
 

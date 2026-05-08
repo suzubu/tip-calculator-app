@@ -350,8 +350,6 @@ fieldset input:focus {
     flex-direction: row;
     align-items: center;
     padding: var(--spacing-400);
-    margin: var(--spacing-1200);
-    gap: var(--spacing-600);
   }
 
   .inputs,
@@ -365,11 +363,17 @@ fieldset input:focus {
     gap: var(--spacing-600);
   }
 
+  fieldset button,
+  fieldset input {
+    padding: var(--spacing-100);
+    font-size: 0.84rem;
+  }
+
   .results {
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-200);
+    padding: var(--spacing-400);
   }
 
   .results button {
