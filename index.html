@@ -31,6 +31,7 @@
                    alt="">
               <input type="text"
                      inputmode="decimal"
+                     pattern="[0-9]*\.?[0-9]{0,2}"
                      name="bill"
                      id="bill"
                      placeholder="0"
@@ -57,6 +58,7 @@
                     data-tip="50">50%</button>
             <input type="text"
                    inputmode="decimal"
+                   pattern="[0-9]*\.?[0-9]*"
                    aria-label="Custom tip percentage"
                    name="custom-tip"
                    id="custom-tip"
@@ -72,8 +74,7 @@
                      for="people">Number of People</label>
               <span class="error-message"
                     id="people-error"
-                    role="alert"
-                    aria-describedby="people-error">Can't be zero</span>
+                    role="alert">Can't be zero</span>
             </div>
             <div class="input-wrapper">
               <img src="src/assets/icon-person.svg"
@@ -81,8 +82,10 @@
               <input type="
                    text"
                      inputmode="numeric"
+                     pattern="[0-9]+"
                      id="people"
                      name="people"
+                     aria-describedby="people-error"
                      placeholder="0"
                      required>
             </div>
