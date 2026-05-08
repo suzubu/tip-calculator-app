@@ -28,8 +28,7 @@
                    for="bill">Bill</label>
             <div class="input-wrapper">
               <img src="src/assets/icon-dollar.svg"
-                   alt=""
-                   aria-hidden="true">
+                   alt="">
               <input type="text"
                      inputmode="decimal"
                      name="bill"
@@ -58,9 +57,13 @@
                     data-tip="50">50%</button>
             <input type="text"
                    inputmode="decimal"
+                   aria-label="Custom tip percentage"
                    name="custom-tip"
                    id="custom-tip"
-                   placeholder="Custom">
+                   placeholder="Custom"
+                   min="0"
+                   max="100">
+
 
           </fieldset>
           <div class="input-group">
@@ -69,13 +72,14 @@
                      for="people">Number of People</label>
               <span class="error-message"
                     id="people-error"
-                    role="alert">Can't be zero</span>
+                    role="alert"
+                    aria-describedby="people-error">Can't be zero</span>
             </div>
             <div class="input-wrapper">
               <img src="src/assets/icon-person.svg"
-                   alt=""
-                   aria-hidden="true">
-              <input type="text"
+                   alt="">
+              <input type="
+                   text"
                      inputmode="numeric"
                      id="people"
                      name="people"
@@ -93,15 +97,13 @@
             <dt class="text-preset-5">Tip Amount <span class="text-preset-6">/
                 person</span></dt>
             <dd id="tip-per-person"
-                class="text-preset-2"
-                aria-label="Tip amount per person">$0.00</dd>
+                class="text-preset-2">$0.00</dd>
           </div>
           <div>
             <dt class="text-preset-5">Total <span class="text-preset-6">/
                 person</span></dt>
             <dd id="total-per-person"
-                class="text-preset-2"
-                aria-label="Total amount per person">$0.00</dd>
+                class="text-preset-2">$0.00</dd>
           </div>
         </dl>
         <button type="button"

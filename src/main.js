@@ -1,5 +1,3 @@
-import "./style.css";
-
 // inputs
 const billInput = document.getElementById("bill");
 const customTipInput = document.getElementById("custom-tip");
@@ -65,15 +63,15 @@ resetButton.addEventListener("click", reset);
 
 function calculate() {
   const bill = parseFloat(billInput.value);
-  const people = parseInt(peopleInput.value);
+  const people = parseInt(peopleInput.value, 10);
 
   // clear error state on every calculation attempt
-  peopleInput.closest(".input-group").classList.remove("error");
+  peopleInput.closest(".input-group")?.classList.remove("error");
 
   // guard clause - only calculate when all three fields are filled
   if (!bill || !selectedTip || isNaN(people) || people <= 0) {
     if (people <= 0 && peopleInput.value !== "") {
-      peopleInput.closest(".input-group").classList.add("error");
+      peopleInput.closest(".input-group")?.classList.add("error");
     }
     tipPerPersonEl.textContent = "$0.00";
     totalPerPersonEl.textContent = "$0.00";
@@ -96,7 +94,7 @@ function reset() {
   peopleInput.value = "";
   selectedTip = null;
   tipButtons.forEach((button) => button.classList.remove("active"));
-  peopleInput.closest(".input-group").classList.remove("error");
+  peopleInput.closest(".input-group")?.classList.remove("error");
   resetButton.classList.remove("active");
   tipPerPersonEl.textContent = "$0.00";
   totalPerPersonEl.textContent = "$0.00";
