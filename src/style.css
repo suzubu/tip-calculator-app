@@ -331,7 +331,7 @@ fieldset input:focus {
 /* tablet */
 @media (min-width: 768px) {
   .card {
-    margin: var(--spacing-600);
+    margin: 0 var(--spacing-600) var(--spacing-600) var(--spacing-600);
     padding: var(--spacing-1000);
   }
 
