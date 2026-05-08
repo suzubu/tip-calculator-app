@@ -257,7 +257,7 @@ fieldset input {
 }
 
 fieldset input::placeholder {
-  opacity: 100%;
+  opacity: 1;
 }
 
 fieldset input:focus {
