@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon"
+        type="image/svg+xml"
+        href="/favicon.svg" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet"
+        href="src/style.css">
+</head>
+
+<body>
+  <header aria-label="Splitter">
+    <img src="src/assets/logo.svg"
+         alt="SPLITTER">
+  </header>
+
+  <main>
+    <div class="card">
+      <section class="inputs">
+        <form class="tip-calculator">
+          <div class="input-group">
+            <label class="text-preset-5"
+                   for="bill">Bill</label>
+            <div class="input-wrapper">
+              <img src="src/assets/icon-dollar.svg"
+                   alt=""
+                   aria-hidden="true">
+              <input type="text"
+                     inputmode="decimal"
+                     name="bill"
+                     id="bill"
+                     placeholder="0"
+                     required>
+
+            </div>
+          </div>
+          <fieldset>
+            <legend class="text-preset-5">Selected Tip %</legend>
+            <button type="button"
+                    class="text-preset-3"
+                    data-tip="5">5%</button>
+            <button type="button"
+                    class="text-preset-3"
+                    data-tip="10">10%</button>
+            <button type="button"
+                    class="text-preset-3"
+                    data-tip="15">15%</button>
+            <button type="button"
+                    class="text-preset-3"
+                    data-tip="25">25%</button>
+            <button type="button"
+                    class="text-preset-3"
+                    data-tip="50">50%</button>
+            <input type="text"
+                   inputmode="decimal"
+                   name="custom-tip"
+                   id="custom-tip"
+                   placeholder="Custom">
+
+          </fieldset>
+          <div class="input-group">
+            <div class="input-group-header">
+              <label class="text-preset-5"
+                     for="people">Number of People</label>
+              <span class="error-message"
+                    id="people-error"
+                    role="alert">Can't be zero</span>
+            </div>
+            <div class="input-wrapper">
+              <img src="src/assets/icon-person.svg"
+                   alt=""
+                   aria-hidden="true">
+              <input type="text"
+                     inputmode="numeric"
+                     id="people"
+                     name="people"
+                     placeholder="0"
+                     required>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="results"
+               aria-live="polite">
+        <dl>
+          <div>
+            <dt class="text-preset-5">Tip Amount <span class="text-preset-6">/
+                person</span></dt>
+            <dd id="tip-per-person"
+                class="text-preset-2"
+                aria-label="Tip amount per person">$0.00</dd>
+          </div>
+          <div>
+            <dt class="text-preset-5">Total <span class="text-preset-6">/
+                person</span></dt>
+            <dd id="total-per-person"
+                class="text-preset-2"
+                aria-label="Total amount per person">$0.00</dd>
+          </div>
+        </dl>
+        <button type="button"
+                class="text-preset-4"
+                id="reset">Reset</button>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module"
+          src="/src/main.js"></script>
+</body>
+
+</html>
